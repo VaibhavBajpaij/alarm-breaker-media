@@ -1,0 +1,77 @@
+name: Build Video Catalog & Optimize Media
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'videos/**'
+      - '.github/workflows/build-catalog.yml'
+      - 'scripts/**'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      # 1) Run the re-encode + thumbnail step, commit and push media changes
+      - name: Re-encode Videos and Generate Thumbnails
+        run: |
+          python scripts/build_catalog.py --optimize-only
+
+      - name: Commit and Push Media Changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add videos/ thumbs/
+          if git diff --staged --quiet; then
+            echo "No media changes to commit"
+          else
+            git commit -m "Optimize media and generate thumbnails [skip ci]"
+            git push origin main
+          fi
+
+      # 2) THEN read the new HEAD SHA and generate catalog.json with that SHA
+      - name: Generate Catalog with Media HEAD SHA
+        run: |
+          MEDIA_HEAD_SHA=$(git rev-parse HEAD)
+          echo "Media HEAD SHA: $MEDIA_HEAD_SHA"
+          python scripts/build_catalog.py --catalog-only --commit-sha "$MEDIA_HEAD_SHA"
+
+      # 3) Commit and push catalog.json ([skip ci])
+      - name: Commit and Push Catalog JSON
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add catalog.json
+          if git diff --staged --quiet; then
+            echo "No catalog changes to commit"
+          else
+            git commit -m "Update catalog.json with media commit [skip ci]"
+            git push origin main
+          fi
+
+      # 4) Purge jsDelivr
+      - name: Purge jsDelivr Cache
+        run: |
+          echo "Purging jsDelivr cache for catalog.json..."
+          curl -s "https://purge.jsdelivr.net/gh/VaibhavBajpaij/alarm-breaker-media@main/catalog.json" || true

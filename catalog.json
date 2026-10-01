@@ -1,0 +1,240 @@
+{
+  "version": 6,
+  "generated_at": "2026-10-01T16:38:10.435464+00:00",
+  "commit": "main",
+  "videos": [
+    {
+      "id": "birthday_happy_birthday",
+      "category": "birthday",
+      "title": "Happy Birthday",
+      "lang": "en",
+      "file": "videos/birthday/happy_birthday.mp4",
+      "thumb": "thumbs/birthday/happy_birthday.jpg",
+      "duration_s": 8.04,
+      "size_bytes": 859775,
+      "sha256": "02baa3d2340a063e0f75fe83d66d899ab62361b1e38d8b0ea3f0b650ea382adb",
+      "tags": [
+        "birthday",
+        "happy"
+      ],
+      "removed": false
+    },
+    {
+      "id": "challenge_pushup_challenge",
+      "category": "challenge",
+      "title": "Pushup Challenge",
+      "lang": "en",
+      "file": "videos/challenge/pushup_challenge.mp4",
+      "thumb": "thumbs/challenge/pushup_challenge.jpg",
+      "duration_s": 8.06,
+      "size_bytes": 768385,
+      "sha256": "35c7f6861dfe315abbf73049a05466260fc20e27b69c170c33f85c9eeac94671",
+      "tags": [
+        "challenge",
+        "pushup"
+      ],
+      "removed": false
+    },
+    {
+      "id": "cricket_cricket_call",
+      "category": "cricket",
+      "title": "Cricket Call",
+      "lang": "en",
+      "file": "videos/cricket/cricket_call.mp4",
+      "thumb": "thumbs/cricket/cricket_call.jpg",
+      "duration_s": 8.06,
+      "size_bytes": 797904,
+      "sha256": "9e66098b39245ab0dd4fc3d165f8221c1b53ed5f79625aedba73cf22dd8bee57",
+      "tags": [
+        "call",
+        "cricket"
+      ],
+      "removed": false
+    },
+    {
+      "id": "family_mom_alarm",
+      "category": "family",
+      "title": "Mom Alarm",
+      "lang": "en",
+      "file": "videos/family/mom_alarm.mp4",
+      "thumb": "thumbs/family/mom_alarm.jpg",
+      "duration_s": 8.04,
+      "size_bytes": 494277,
+      "sha256": "cca75d23cbf766cb3d3bacf0068e39adf5978b4e37050685a6de5bf507fcd7f6",
+      "tags": [
+        "alarm",
+        "family",
+        "mom"
+      ],
+      "removed": false
+    },
+    {
+      "id": "gaming_gaming_squad",
+      "category": "gaming",
+      "title": "Gaming Squad",
+      "lang": "en",
+      "file": "videos/gaming/gaming_squad.mp4",
+      "thumb": "thumbs/gaming/gaming_squad.jpg",
+      "duration_s": 8.04,
+      "size_bytes": 773806,
+      "sha256": "7b1ade29cccdb1dd1e7446ffcd1afa5d73fde715ed90ac64473b490784fb5bdd",
+      "tags": [
+        "gaming",
+        "squad"
+      ],
+      "removed": false
+    },
+    {
+      "id": "love_love_wake_up",
+      "category": "love",
+      "title": "Love Wake Up",
+      "lang": "en",
+      "file": "videos/love/love_wake_up.mp4",
+      "thumb": "thumbs/love/love_wake_up.jpg",
+      "duration_s": 8.06,
+      "size_bytes": 561256,
+      "sha256": "b7dad334366e423a9febc80705817fd37a23620bf1b50f0202f762e0839109af",
+      "tags": [
+        "love",
+        "up",
+        "wake"
+      ],
+      "removed": false
+    },
+    {
+      "id": "meeting_meeting_panic",
+      "category": "meeting",
+      "title": "Meeting Panic",
+      "lang": "en",
+      "file": "videos/meeting/meeting_panic.mp4",
+      "thumb": "thumbs/meeting/meeting_panic.jpg",
+      "duration_s": 8.06,
+      "size_bytes": 730903,
+      "sha256": "d9667e8e2816dd7b14dd2e26c186a98b7eef2dd13c210493b1ca1518f917e30a",
+      "tags": [
+        "meeting",
+        "panic"
+      ],
+      "removed": false
+    },
+    {
+      "id": "motivation_champion",
+      "category": "motivation",
+      "title": "Champion",
+      "lang": "en",
+      "file": "videos/motivation/champion.mp4",
+      "thumb": "thumbs/motivation/champion.jpg",
+      "duration_s": 8.04,
+      "size_bytes": 735406,
+      "sha256": "fb922424cff06834155c9f08fc98b88a61fe81f16e3fcfa5b29ebaa52a883e3e",
+      "tags": [
+        "champion",
+        "motivation"
+      ],
+      "removed": false
+    },
+    {
+      "id": "motivation_coffee_rescue",
+      "category": "motivation",
+      "title": "Coffee Rescue",
+      "lang": "en",
+      "file": "videos/motivation/coffee_rescue.mp4",
+      "thumb": "thumbs/motivation/coffee_rescue.jpg",
+      "duration_s": 8.06,
+      "size_bytes": 650669,
+      "sha256": "89f234339af2c39bd5470b840cf8e1f47a40bf826cb928fa34824abc61c42912",
+      "tags": [
+        "coffee",
+        "motivation",
+        "rescue"
+      ],
+      "removed": false
+    },
+    {
+      "id": "motivation_rocket_launch_motivation",
+      "category": "motivation",
+      "title": "Rocket Launch Motivation",
+      "lang": "en",
+      "file": "videos/motivation/rocket_launch_motivation.mp4",
+      "thumb": "thumbs/motivation/rocket_launch_motivation.jpg",
+      "duration_s": 8.04,
+      "size_bytes": 825255,
+      "sha256": "a44a99834004001840ff9631a5017bd97b56e1a4734e725685172d94973de83b",
+      "tags": [
+        "launch",
+        "motivation",
+        "rocket"
+      ],
+      "removed": false
+    },
+    {
+      "id": "pets_pet_time_dog",
+      "category": "pets",
+      "title": "Pet Time Dog",
+      "lang": "en",
+      "file": "videos/pets/pet_time_dog.mp4",
+      "thumb": "thumbs/pets/pet_time_dog.jpg",
+      "duration_s": 8.04,
+      "size_bytes": 605611,
+      "sha256": "b82b76575ff6e5486952e368e3af3fe8cfd0ef6b8b8d1148125e0ebd830f2704",
+      "tags": [
+        "dog",
+        "pet",
+        "pets",
+        "time"
+      ],
+      "removed": false
+    },
+    {
+      "id": "roast_rooster_chaos",
+      "category": "roast",
+      "title": "Rooster Chaos",
+      "lang": "en",
+      "file": "videos/roast/rooster_chaos.mp4",
+      "thumb": "thumbs/roast/rooster_chaos.jpg",
+      "duration_s": 8.04,
+      "size_bytes": 765659,
+      "sha256": "6fa2ca0f0300032b3ee076acc1db7b51dd19739788287792789797bddf65c184",
+      "tags": [
+        "chaos",
+        "roast",
+        "rooster"
+      ],
+      "removed": false
+    },
+    {
+      "id": "study_exam_day",
+      "category": "study",
+      "title": "Exam Day",
+      "lang": "en",
+      "file": "videos/study/exam_day.mp4",
+      "thumb": "thumbs/study/exam_day.jpg",
+      "duration_s": 8.06,
+      "size_bytes": 661642,
+      "sha256": "e501fe2bfbdc17f5a70089c5934e2c7216360fb3c4e24f45dcca33e09c30b003",
+      "tags": [
+        "day",
+        "exam",
+        "study"
+      ],
+      "removed": false
+    },
+    {
+      "id": "travel_flight_day",
+      "category": "travel",
+      "title": "Flight Day",
+      "lang": "en",
+      "file": "videos/travel/flight_day.mp4",
+      "thumb": "thumbs/travel/flight_day.jpg",
+      "duration_s": 8.06,
+      "size_bytes": 740822,
+      "sha256": "faffe0c57dff79e4468a75a667e36773c738a07ac694e8c0549b90d63e604ba2",
+      "tags": [
+        "day",
+        "flight",
+        "travel"
+      ],
+      "removed": false
+    }
+  ]
+}

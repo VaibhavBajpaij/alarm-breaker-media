@@ -1,0 +1,9 @@
+# Ignore Python scripts at root
+/*.py
+
+# Temporary video encodings
+*.tmp.mp4
+
+# Uncompressed originals
+originals/
+originals
