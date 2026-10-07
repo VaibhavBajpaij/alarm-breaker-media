@@ -1,0 +1,303 @@
+{
+  "version": 3,
+  "base_url": "https://cdn.jsdelivr.net/gh/VaibhavBajpaij/alarm-breaker-media@media-v3/",
+  "backup_base_urls": [
+    "https://vaibhavbajpaij.github.io/alarm-breaker-media/"
+  ],
+  "videos": [
+    {
+      "id": "birthday_happy_birthday",
+      "title": "Happy Birthday",
+      "category": "birthday",
+      "duration_s": 8.04,
+      "thumb": "assets/videos/thumbs/birthday_happy_birthday_v3.webp",
+      "play_pack": "pack_general",
+      "pack_path": "videos/birthday_happy_birthday_v3_720.mp4",
+      "files": {
+        "720": {
+          "path": "v/birthday_happy_birthday_v3_720.mp4",
+          "bytes": 1531519,
+          "sha256": "59146e865526db0f316b056f889931de1187e7d74379117b589d625e526a907e"
+        },
+        "480": {
+          "path": "v/birthday_happy_birthday_v3_480.mp4",
+          "bytes": 876176,
+          "sha256": "8a0e559fca51f76449c09df5078aef3a5937eb632973f37c0a6deb44a17ff4a6"
+        }
+      }
+    },
+    {
+      "id": "challenge_pushup_challenge",
+      "title": "Pushup Challenge",
+      "category": "challenge",
+      "duration_s": 8.06,
+      "thumb": "assets/videos/thumbs/challenge_pushup_challenge_v3.webp",
+      "play_pack": "pack_starter",
+      "pack_path": "videos/challenge_pushup_challenge_v3_720.mp4",
+      "files": {
+        "720": {
+          "path": "v/challenge_pushup_challenge_v3_720.mp4",
+          "bytes": 1537749,
+          "sha256": "5045cdf79c47717709fb95a2c19e443276ca3d9fbabd7f532249e3e50fb6d8c6"
+        },
+        "480": {
+          "path": "v/challenge_pushup_challenge_v3_480.mp4",
+          "bytes": 875061,
+          "sha256": "8b4f4fd3d959d6b132632208f7164bca9708d416bc76b6e27cc128e9d993cba1"
+        }
+      }
+    },
+    {
+      "id": "cricket_call",
+      "title": "Cricket Call",
+      "category": "cricket",
+      "duration_s": 8.06,
+      "thumb": "assets/videos/thumbs/cricket_call_v3.webp",
+      "play_pack": "pack_general",
+      "pack_path": "videos/cricket_call_v3_720.mp4",
+      "files": {
+        "720": {
+          "path": "v/cricket_call_v3_720.mp4",
+          "bytes": 1668053,
+          "sha256": "723eaf6f54d11cb14e0d08b85adf0f925de944bc84127235bc06000908c8efb3"
+        },
+        "480": {
+          "path": "v/cricket_call_v3_480.mp4",
+          "bytes": 947851,
+          "sha256": "9fa0331a2707d751f351c2f539a9f02f0a0f15c23ab926233a3ef3e6775e8245"
+        }
+      }
+    },
+    {
+      "id": "family_mom_alarm",
+      "title": "Mom Alarm",
+      "category": "family",
+      "duration_s": 8.04,
+      "thumb": "assets/videos/thumbs/family_mom_alarm_v3.webp",
+      "play_pack": "pack_general",
+      "pack_path": "videos/family_mom_alarm_v3_720.mp4",
+      "files": {
+        "720": {
+          "path": "v/family_mom_alarm_v3_720.mp4",
+          "bytes": 1423670,
+          "sha256": "c4e41e49d3ad0463af5799d78a8d7b0cf77a2d4d500b07de65f60b2465c5a63c"
+        },
+        "480": {
+          "path": "v/family_mom_alarm_v3_480.mp4",
+          "bytes": 821676,
+          "sha256": "aa7654140e173e3c8d556da3a7ab18434e65796380374a9ebf5115171086473a"
+        }
+      }
+    },
+    {
+      "id": "gaming_squad",
+      "title": "Gaming Squad",
+      "category": "gaming",
+      "duration_s": 8.04,
+      "thumb": "assets/videos/thumbs/gaming_squad_v3.webp",
+      "play_pack": "pack_general",
+      "pack_path": "videos/gaming_squad_v3_720.mp4",
+      "files": {
+        "720": {
+          "path": "v/gaming_squad_v3_720.mp4",
+          "bytes": 1579284,
+          "sha256": "07efdd6f316284c38dd5bc74a2da3ee3e461c85c9bde889e2f05208e8fc05638"
+        },
+        "480": {
+          "path": "v/gaming_squad_v3_480.mp4",
+          "bytes": 873368,
+          "sha256": "30311dafe24c7bb8c2b3beaba487481c84118f4348a97d052607badc7b43ac72"
+        }
+      }
+    },
+    {
+      "id": "love_wake_up",
+      "title": "Love Wake Up",
+      "category": "love",
+      "duration_s": 8.06,
+      "thumb": "assets/videos/thumbs/love_wake_up_v3.webp",
+      "play_pack": "pack_general",
+      "pack_path": "videos/love_wake_up_v3_720.mp4",
+      "files": {
+        "720": {
+          "path": "v/love_wake_up_v3_720.mp4",
+          "bytes": 1484655,
+          "sha256": "baaf291a2bb0cf7c8ed28da5f41e928b3eb3c8aa6192b1daa2399046cdb692a6"
+        },
+        "480": {
+          "path": "v/love_wake_up_v3_480.mp4",
+          "bytes": 839833,
+          "sha256": "ee019a456a598b673cd9dae1514e71128e6186376d14a91cf60ce4c9e5e87add"
+        }
+      }
+    },
+    {
+      "id": "meeting_panic",
+      "title": "Meeting Panic",
+      "category": "meeting",
+      "duration_s": 8.06,
+      "thumb": "assets/videos/thumbs/meeting_panic_v3.webp",
+      "play_pack": "pack_general",
+      "pack_path": "videos/meeting_panic_v3_720.mp4",
+      "files": {
+        "720": {
+          "path": "v/meeting_panic_v3_720.mp4",
+          "bytes": 1512544,
+          "sha256": "2531af7bb1a3ffdb24677a1bdcf1202bbda42c85c46da68ec87b02dc894bc215"
+        },
+        "480": {
+          "path": "v/meeting_panic_v3_480.mp4",
+          "bytes": 846687,
+          "sha256": "a1eadc66f57660e5c5ecf33d452a23490bd02e2ee1662c5d4acd34b441971f3c"
+        }
+      }
+    },
+    {
+      "id": "motivation_champion",
+      "title": "Champion",
+      "category": "motivation",
+      "duration_s": 8.04,
+      "thumb": "assets/videos/thumbs/motivation_champion_v3.webp",
+      "play_pack": "pack_starter",
+      "pack_path": "videos/motivation_champion_v3_720.mp4",
+      "files": {
+        "720": {
+          "path": "v/motivation_champion_v3_720.mp4",
+          "bytes": 1726364,
+          "sha256": "15062bad5fdaccce0eff111225dff9110d4a497c138a53650dbfaa1c5b6520cd"
+        },
+        "480": {
+          "path": "v/motivation_champion_v3_480.mp4",
+          "bytes": 981069,
+          "sha256": "c3c3a01ee1fba6c5db550dc1ea060775b12a29964d57e38be628554c564ce901"
+        }
+      }
+    },
+    {
+      "id": "motivation_coffee_rescue",
+      "title": "Coffee Rescue",
+      "category": "motivation",
+      "duration_s": 8.06,
+      "thumb": "assets/videos/thumbs/motivation_coffee_rescue_v3.webp",
+      "play_pack": "pack_motivation",
+      "pack_path": "videos/motivation_coffee_rescue_v3_720.mp4",
+      "files": {
+        "720": {
+          "path": "v/motivation_coffee_rescue_v3_720.mp4",
+          "bytes": 1508636,
+          "sha256": "f143cc768ef5176d9e5085f1640ea0034be58587e9ad3ab702d9fc3d7f75e7b0"
+        },
+        "480": {
+          "path": "v/motivation_coffee_rescue_v3_480.mp4",
+          "bytes": 864154,
+          "sha256": "5292c3bde073939f3949d19f34ce83ad8de84af47e91aa4aad5f479f0a2d1f6a"
+        }
+      }
+    },
+    {
+      "id": "motivation_rocket_launch_motivation",
+      "title": "Rocket Launch Motivation",
+      "category": "motivation",
+      "duration_s": 8.04,
+      "thumb": "assets/videos/thumbs/motivation_rocket_launch_motivation_v3.webp",
+      "play_pack": "pack_starter",
+      "pack_path": "videos/motivation_rocket_launch_motivation_v3_720.mp4",
+      "files": {
+        "720": {
+          "path": "v/motivation_rocket_launch_motivation_v3_720.mp4",
+          "bytes": 1732302,
+          "sha256": "0b9e2708e14f502515502ea748788d210c7a5787d3daf8cd6671e77e8cf6a1fb"
+        },
+        "480": {
+          "path": "v/motivation_rocket_launch_motivation_v3_480.mp4",
+          "bytes": 965766,
+          "sha256": "442a94680af386cc60574a2c132948ef50a9b7c4e8575f85f7de8cf75f65dabb"
+        }
+      }
+    },
+    {
+      "id": "pets_pet_time_dog",
+      "title": "Pet Time Dog",
+      "category": "pets",
+      "duration_s": 8.04,
+      "thumb": "assets/videos/thumbs/pets_pet_time_dog_v3.webp",
+      "play_pack": "pack_general",
+      "pack_path": "videos/pets_pet_time_dog_v3_720.mp4",
+      "files": {
+        "720": {
+          "path": "v/pets_pet_time_dog_v3_720.mp4",
+          "bytes": 1467930,
+          "sha256": "22f9bf3a3e423ee07019ce849ea49393abbfaad64b5c542a4d78a07761c5c0a8"
+        },
+        "480": {
+          "path": "v/pets_pet_time_dog_v3_480.mp4",
+          "bytes": 843862,
+          "sha256": "8dd1ddb3639c9a1ab2ed3d1c0c73269f37813545987a6b9c3f856dd10511286e"
+        }
+      }
+    },
+    {
+      "id": "roast_rooster_chaos",
+      "title": "Rooster Chaos",
+      "category": "roast",
+      "duration_s": 8.04,
+      "thumb": "assets/videos/thumbs/roast_rooster_chaos_v3.webp",
+      "play_pack": "pack_starter",
+      "pack_path": "videos/roast_rooster_chaos_v3_720.mp4",
+      "files": {
+        "720": {
+          "path": "v/roast_rooster_chaos_v3_720.mp4",
+          "bytes": 1761784,
+          "sha256": "e2b40d5c3706eabaa898939a5fdcf3c3ca0f729b284b3e3773a21d5bb660447d"
+        },
+        "480": {
+          "path": "v/roast_rooster_chaos_v3_480.mp4",
+          "bytes": 1003063,
+          "sha256": "8a17d3c46f153c94a6fc38a228c02475c7eb8ddbcdd2594ca76581049254c198"
+        }
+      }
+    },
+    {
+      "id": "study_exam_day",
+      "title": "Exam Day",
+      "category": "study",
+      "duration_s": 8.06,
+      "thumb": "assets/videos/thumbs/study_exam_day_v3.webp",
+      "play_pack": "pack_general",
+      "pack_path": "videos/study_exam_day_v3_720.mp4",
+      "files": {
+        "720": {
+          "path": "v/study_exam_day_v3_720.mp4",
+          "bytes": 1565516,
+          "sha256": "9f2309fc40468714cdc7007b6469feea1ea2fda310df801578dc68c6ee6466a7"
+        },
+        "480": {
+          "path": "v/study_exam_day_v3_480.mp4",
+          "bytes": 886750,
+          "sha256": "fc5e711221cf441c51b997087a6ec07c310e62ad82a3b6677bc12e15bf690c7a"
+        }
+      }
+    },
+    {
+      "id": "travel_flight_day",
+      "title": "Flight Day",
+      "category": "travel",
+      "duration_s": 8.06,
+      "thumb": "assets/videos/thumbs/travel_flight_day_v3.webp",
+      "play_pack": "pack_general",
+      "pack_path": "videos/travel_flight_day_v3_720.mp4",
+      "files": {
+        "720": {
+          "path": "v/travel_flight_day_v3_720.mp4",
+          "bytes": 1648946,
+          "sha256": "b7a87b14e61a12bf4ca7f7f005f1d364429e35c0b056e045d01d58c1f7a215fb"
+        },
+        "480": {
+          "path": "v/travel_flight_day_v3_480.mp4",
+          "bytes": 938398,
+          "sha256": "11c8c08d31f1bd438e7b2378cca354f9630e55f532c6db283a032f2d7491f48e"
+        }
+      }
+    }
+  ]
+}
