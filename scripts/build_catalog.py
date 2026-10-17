@@ -291,17 +291,11 @@ def generate_manifest_json(base_dir):
             v720_abs = os.path.join(base_dir, v720_rel)
             v480_abs = os.path.join(base_dir, v480_rel)
 
-            # Determine thumbnail path:
-            # If item was originally an offline bundled asset in the APK, preserve assets/videos/thumbs/
-            # For all remote items, use relative path thumbs/<id>_v3.webp (NO assets/ prefix so Image.network is used)
+            old_item = existing_map.get(video_id, {})
+            # Strictly output thumbs/<filename>.webp without assets/ prefix
             webp_rel = f'thumbs/{video_id}_v3.webp'
             webp_abs = os.path.join(base_dir, webp_rel)
-            old_item = existing_map.get(video_id, {})
-            old_thumb = old_item.get('thumb', '')
-
-            if old_thumb.startswith('assets/'):
-                thumb_rel = old_thumb
-            elif os.path.exists(webp_abs):
+            if os.path.exists(webp_abs):
                 thumb_rel = webp_rel
             else:
                 thumb_rel = f'thumbs/{category}/{stem}.jpg'

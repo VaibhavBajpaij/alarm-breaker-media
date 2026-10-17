@@ -1,5 +1,5 @@
 {
-  "version": 8,
+  "version": 10,
   "base_url": "https://cdn.jsdelivr.net/gh/VaibhavBajpaij/alarm-breaker-media@main/",
   "backup_base_urls": [
     "https://vaibhavbajpaij.github.io/alarm-breaker-media/"
@@ -10,7 +10,7 @@
       "title": "Happy Birthday",
       "category": "birthday",
       "duration_s": 8.04,
-      "thumb": "assets/videos/thumbs/birthday_happy_birthday_v3.webp",
+      "thumb": "thumbs/birthday_happy_birthday_v3.webp",
       "play_pack": "pack_general",
       "pack_path": "videos/birthday_happy_birthday_v3_720.mp4",
       "files": {
@@ -31,7 +31,7 @@
       "title": "Pushup Challenge",
       "category": "challenge",
       "duration_s": 8.06,
-      "thumb": "assets/videos/thumbs/challenge_pushup_challenge_v3.webp",
+      "thumb": "thumbs/challenge_pushup_challenge_v3.webp",
       "play_pack": "pack_starter",
       "pack_path": "videos/challenge_pushup_challenge_v3_720.mp4",
       "files": {
@@ -73,7 +73,7 @@
       "title": "Mom Alarm",
       "category": "family",
       "duration_s": 8.04,
-      "thumb": "assets/videos/thumbs/family_mom_alarm_v3.webp",
+      "thumb": "thumbs/family_mom_alarm_v3.webp",
       "play_pack": "pack_general",
       "pack_path": "videos/family_mom_alarm_v3_720.mp4",
       "files": {
@@ -157,7 +157,7 @@
       "title": "Champion",
       "category": "motivation",
       "duration_s": 8.04,
-      "thumb": "assets/videos/thumbs/motivation_champion_v3.webp",
+      "thumb": "thumbs/motivation_champion_v3.webp",
       "play_pack": "pack_starter",
       "pack_path": "videos/motivation_champion_v3_720.mp4",
       "files": {
@@ -178,7 +178,7 @@
       "title": "Coffee Rescue",
       "category": "motivation",
       "duration_s": 8.06,
-      "thumb": "assets/videos/thumbs/motivation_coffee_rescue_v3.webp",
+      "thumb": "thumbs/motivation_coffee_rescue_v3.webp",
       "play_pack": "pack_motivation",
       "pack_path": "videos/motivation_coffee_rescue_v3_720.mp4",
       "files": {
@@ -199,7 +199,7 @@
       "title": "Rocket Launch Motivation",
       "category": "motivation",
       "duration_s": 8.04,
-      "thumb": "assets/videos/thumbs/motivation_rocket_launch_motivation_v3.webp",
+      "thumb": "thumbs/motivation_rocket_launch_motivation_v3.webp",
       "play_pack": "pack_starter",
       "pack_path": "videos/motivation_rocket_launch_motivation_v3_720.mp4",
       "files": {
@@ -220,7 +220,7 @@
       "title": "Pet Time Dog",
       "category": "pets",
       "duration_s": 8.04,
-      "thumb": "assets/videos/thumbs/pets_pet_time_dog_v3.webp",
+      "thumb": "thumbs/pets_pet_time_dog_v3.webp",
       "play_pack": "pack_general",
       "pack_path": "videos/pets_pet_time_dog_v3_720.mp4",
       "files": {
@@ -304,7 +304,7 @@
       "title": "Rooster Chaos",
       "category": "roast",
       "duration_s": 8.04,
-      "thumb": "assets/videos/thumbs/roast_rooster_chaos_v3.webp",
+      "thumb": "thumbs/roast_rooster_chaos_v3.webp",
       "play_pack": "pack_starter",
       "pack_path": "videos/roast_rooster_chaos_v3_720.mp4",
       "files": {
@@ -325,7 +325,7 @@
       "title": "Exam Day",
       "category": "study",
       "duration_s": 8.06,
-      "thumb": "assets/videos/thumbs/study_exam_day_v3.webp",
+      "thumb": "thumbs/study_exam_day_v3.webp",
       "play_pack": "pack_general",
       "pack_path": "videos/study_exam_day_v3_720.mp4",
       "files": {
@@ -346,7 +346,7 @@
       "title": "Flight Day",
       "category": "travel",
       "duration_s": 8.06,
-      "thumb": "assets/videos/thumbs/travel_flight_day_v3.webp",
+      "thumb": "thumbs/travel_flight_day_v3.webp",
       "play_pack": "pack_general",
       "pack_path": "videos/travel_flight_day_v3_720.mp4",
       "files": {
