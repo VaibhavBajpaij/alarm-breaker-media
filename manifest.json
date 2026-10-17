@@ -1,6 +1,6 @@
 {
   "version": 4,
-  "base_url": "https://cdn.jsdelivr.net/gh/VaibhavBajpaij/alarm-breaker-media@media-v3/",
+  "base_url": "https://cdn.jsdelivr.net/gh/VaibhavBajpaij/alarm-breaker-media@main/",
   "backup_base_urls": [
     "https://vaibhavbajpaij.github.io/alarm-breaker-media/"
   ],

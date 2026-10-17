@@ -73,5 +73,6 @@ jobs:
       # 4) Purge jsDelivr
       - name: Purge jsDelivr Cache
         run: |
-          echo "Purging jsDelivr cache for catalog.json..."
+          echo "Purging jsDelivr cache for catalog.json and manifest.json..."
           curl -s "https://purge.jsdelivr.net/gh/VaibhavBajpaij/alarm-breaker-media@main/catalog.json" || true
+          curl -s "https://purge.jsdelivr.net/gh/VaibhavBajpaij/alarm-breaker-media@main/manifest.json" || true
