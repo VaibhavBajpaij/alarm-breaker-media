@@ -1,5 +1,5 @@
 {
-  "version": 6,
+  "version": 8,
   "base_url": "https://cdn.jsdelivr.net/gh/VaibhavBajpaij/alarm-breaker-media@main/",
   "backup_base_urls": [
     "https://vaibhavbajpaij.github.io/alarm-breaker-media/"
@@ -48,23 +48,23 @@
       }
     },
     {
-      "id": "cricket_call",
+      "id": "cricket_cricket_call",
       "title": "Cricket Call",
       "category": "cricket",
       "duration_s": 8.06,
-      "thumb": "assets/videos/thumbs/cricket_call_v3.webp",
+      "thumb": "thumbs/cricket_cricket_call_v3.webp",
       "play_pack": "pack_general",
-      "pack_path": "videos/cricket_call_v3_720.mp4",
+      "pack_path": "videos/cricket_cricket_call_v3_720.mp4",
       "files": {
         "720": {
-          "path": "v/cricket_call_v3_720.mp4",
-          "bytes": 1668053,
-          "sha256": "723eaf6f54d11cb14e0d08b85adf0f925de944bc84127235bc06000908c8efb3"
+          "path": "v/cricket_cricket_call_v3_720.mp4",
+          "bytes": 1350428,
+          "sha256": "b5ba75615d57db751ec101e5c94552eaa3ca6262df154046a29f01ab595d8928"
         },
         "480": {
-          "path": "v/cricket_call_v3_480.mp4",
-          "bytes": 947851,
-          "sha256": "9fa0331a2707d751f351c2f539a9f02f0a0f15c23ab926233a3ef3e6775e8245"
+          "path": "v/cricket_cricket_call_v3_480.mp4",
+          "bytes": 790535,
+          "sha256": "ee921c1601418d3d022ef11127e06fe351498e2d703d90c8e4952ad3297fed75"
         }
       }
     },
@@ -90,65 +90,65 @@
       }
     },
     {
-      "id": "gaming_squad",
+      "id": "gaming_gaming_squad",
       "title": "Gaming Squad",
       "category": "gaming",
       "duration_s": 8.04,
-      "thumb": "assets/videos/thumbs/gaming_squad_v3.webp",
+      "thumb": "thumbs/gaming_gaming_squad_v3.webp",
       "play_pack": "pack_general",
-      "pack_path": "videos/gaming_squad_v3_720.mp4",
+      "pack_path": "videos/gaming_gaming_squad_v3_720.mp4",
       "files": {
         "720": {
-          "path": "v/gaming_squad_v3_720.mp4",
-          "bytes": 1579284,
-          "sha256": "07efdd6f316284c38dd5bc74a2da3ee3e461c85c9bde889e2f05208e8fc05638"
+          "path": "v/gaming_gaming_squad_v3_720.mp4",
+          "bytes": 1280579,
+          "sha256": "afa8142fd40b7625a41e1c783b31ada90733e97b44d562636e78e2ea9d1b6f64"
         },
         "480": {
-          "path": "v/gaming_squad_v3_480.mp4",
-          "bytes": 873368,
-          "sha256": "30311dafe24c7bb8c2b3beaba487481c84118f4348a97d052607badc7b43ac72"
+          "path": "v/gaming_gaming_squad_v3_480.mp4",
+          "bytes": 721196,
+          "sha256": "58846445778a084587d335215bfc6e081a902d0a39e7400f6f333e32bd3557ee"
         }
       }
     },
     {
-      "id": "love_wake_up",
+      "id": "love_love_wake_up",
       "title": "Love Wake Up",
       "category": "love",
       "duration_s": 8.06,
-      "thumb": "assets/videos/thumbs/love_wake_up_v3.webp",
+      "thumb": "thumbs/love_love_wake_up_v3.webp",
       "play_pack": "pack_general",
-      "pack_path": "videos/love_wake_up_v3_720.mp4",
+      "pack_path": "videos/love_love_wake_up_v3_720.mp4",
       "files": {
         "720": {
-          "path": "v/love_wake_up_v3_720.mp4",
-          "bytes": 1484655,
-          "sha256": "baaf291a2bb0cf7c8ed28da5f41e928b3eb3c8aa6192b1daa2399046cdb692a6"
+          "path": "v/love_love_wake_up_v3_720.mp4",
+          "bytes": 1198526,
+          "sha256": "28491ec4e64b074b2f956fbd5159db93526041a12006773ba1981c5822d591f6"
         },
         "480": {
-          "path": "v/love_wake_up_v3_480.mp4",
-          "bytes": 839833,
-          "sha256": "ee019a456a598b673cd9dae1514e71128e6186376d14a91cf60ce4c9e5e87add"
+          "path": "v/love_love_wake_up_v3_480.mp4",
+          "bytes": 698556,
+          "sha256": "b472823a287be5c6977c1d6fec8ecb8039f5b2687b4d3d7b842a73bf16870daf"
         }
       }
     },
     {
-      "id": "meeting_panic",
+      "id": "meeting_meeting_panic",
       "title": "Meeting Panic",
       "category": "meeting",
       "duration_s": 8.06,
-      "thumb": "assets/videos/thumbs/meeting_panic_v3.webp",
+      "thumb": "thumbs/meeting_meeting_panic_v3.webp",
       "play_pack": "pack_general",
-      "pack_path": "videos/meeting_panic_v3_720.mp4",
+      "pack_path": "videos/meeting_meeting_panic_v3_720.mp4",
       "files": {
         "720": {
-          "path": "v/meeting_panic_v3_720.mp4",
-          "bytes": 1512544,
-          "sha256": "2531af7bb1a3ffdb24677a1bdcf1202bbda42c85c46da68ec87b02dc894bc215"
+          "path": "v/meeting_meeting_panic_v3_720.mp4",
+          "bytes": 1227160,
+          "sha256": "fa1514066d7389d01cadc2044ad40b536719082591810f9b4fe769eb3b08afc6"
         },
         "480": {
-          "path": "v/meeting_panic_v3_480.mp4",
-          "bytes": 846687,
-          "sha256": "a1eadc66f57660e5c5ecf33d452a23490bd02e2ee1662c5d4acd34b441971f3c"
+          "path": "v/meeting_meeting_panic_v3_480.mp4",
+          "bytes": 704493,
+          "sha256": "c9e19775f125ca5fb96d545b40e8077f4fbf03dd87c93cae8b2e1616c99e5884"
         }
       }
     },
@@ -237,132 +237,6 @@
       }
     },
     {
-      "id": "roast_rooster_chaos",
-      "title": "Rooster Chaos",
-      "category": "roast",
-      "duration_s": 8.04,
-      "thumb": "assets/videos/thumbs/roast_rooster_chaos_v3.webp",
-      "play_pack": "pack_starter",
-      "pack_path": "videos/roast_rooster_chaos_v3_720.mp4",
-      "files": {
-        "720": {
-          "path": "v/roast_rooster_chaos_v3_720.mp4",
-          "bytes": 1761784,
-          "sha256": "e2b40d5c3706eabaa898939a5fdcf3c3ca0f729b284b3e3773a21d5bb660447d"
-        },
-        "480": {
-          "path": "v/roast_rooster_chaos_v3_480.mp4",
-          "bytes": 1003063,
-          "sha256": "8a17d3c46f153c94a6fc38a228c02475c7eb8ddbcdd2594ca76581049254c198"
-        }
-      }
-    },
-    {
-      "id": "study_exam_day",
-      "title": "Exam Day",
-      "category": "study",
-      "duration_s": 8.06,
-      "thumb": "assets/videos/thumbs/study_exam_day_v3.webp",
-      "play_pack": "pack_general",
-      "pack_path": "videos/study_exam_day_v3_720.mp4",
-      "files": {
-        "720": {
-          "path": "v/study_exam_day_v3_720.mp4",
-          "bytes": 1565516,
-          "sha256": "9f2309fc40468714cdc7007b6469feea1ea2fda310df801578dc68c6ee6466a7"
-        },
-        "480": {
-          "path": "v/study_exam_day_v3_480.mp4",
-          "bytes": 886750,
-          "sha256": "fc5e711221cf441c51b997087a6ec07c310e62ad82a3b6677bc12e15bf690c7a"
-        }
-      }
-    },
-    {
-      "id": "travel_flight_day",
-      "title": "Flight Day",
-      "category": "travel",
-      "duration_s": 8.06,
-      "thumb": "assets/videos/thumbs/travel_flight_day_v3.webp",
-      "play_pack": "pack_general",
-      "pack_path": "videos/travel_flight_day_v3_720.mp4",
-      "files": {
-        "720": {
-          "path": "v/travel_flight_day_v3_720.mp4",
-          "bytes": 1648946,
-          "sha256": "b7a87b14e61a12bf4ca7f7f005f1d364429e35c0b056e045d01d58c1f7a215fb"
-        },
-        "480": {
-          "path": "v/travel_flight_day_v3_480.mp4",
-          "bytes": 938398,
-          "sha256": "11c8c08d31f1bd438e7b2378cca354f9630e55f532c6db283a032f2d7491f48e"
-        }
-      }
-    },
-    {
-      "id": "love_sleepy_head_in_relationship",
-      "title": "Sleepy Head In Relationship",
-      "category": "love",
-      "duration_s": 10.05,
-      "thumb": "thumbs/love_sleepy_head_in_relationship_v3.webp",
-      "play_pack": "pack_general",
-      "pack_path": "videos/love_sleepy_head_in_relationship_v3_720.mp4",
-      "files": {
-        "720": {
-          "path": "v/love_sleepy_head_in_relationship_v3_720.mp4",
-          "bytes": 1633730,
-          "sha256": "1c6403280a16ce9a4cc8344485f2b87033e8eea9f74c314302ee8eb36f2d7687"
-        },
-        "480": {
-          "path": "v/love_sleepy_head_in_relationship_v3_480.mp4",
-          "bytes": 957490,
-          "sha256": "3af40fc091e50a4db6d3e35370acb28b4c7e9ba9b04aa177767624860988dd3b"
-        }
-      }
-    },
-    {
-      "id": "love_video_call_with_your_relationship_partner",
-      "title": "Video Call With Your Relationship Partner",
-      "category": "love",
-      "duration_s": 10.05,
-      "thumb": "thumbs/love_video_call_with_your_relationship_partner_v3.webp",
-      "play_pack": "pack_general",
-      "pack_path": "videos/love_video_call_with_your_relationship_partner_v3_720.mp4",
-      "files": {
-        "720": {
-          "path": "v/love_video_call_with_your_relationship_partner_v3_720.mp4",
-          "bytes": 1517424,
-          "sha256": "f604618c693ee050f3c654d5d563246d1e9e631cbffb4683043fcc84de35624f"
-        },
-        "480": {
-          "path": "v/love_video_call_with_your_relationship_partner_v3_480.mp4",
-          "bytes": 894618,
-          "sha256": "93e4934d580c031145f534e53df488186902e266f04d31f7be0ea4397aac2a31"
-        }
-      }
-    },
-    {
-      "id": "love_you_cant_spend_whole_day_with_pillow",
-      "title": "You Cant Spend Whole Day With Pillow",
-      "category": "love",
-      "duration_s": 10.05,
-      "thumb": "thumbs/love_you_cant_spend_whole_day_with_pillow_v3.webp",
-      "play_pack": "pack_general",
-      "pack_path": "videos/love_you_cant_spend_whole_day_with_pillow_v3_720.mp4",
-      "files": {
-        "720": {
-          "path": "v/love_you_cant_spend_whole_day_with_pillow_v3_720.mp4",
-          "bytes": 1509267,
-          "sha256": "d8f60d0b51b1a442ef54a61e9e2c0da6fa6407c67591cbc9532306b6e1c10dcd"
-        },
-        "480": {
-          "path": "v/love_you_cant_spend_whole_day_with_pillow_v3_480.mp4",
-          "bytes": 882375,
-          "sha256": "48628daf2f7f584c67bcad48af2741eaca08f6264090a8c89d8c500793617cbe"
-        }
-      }
-    },
-    {
       "id": "relationship_sleepy_head_in_relationship",
       "title": "Sleepy Head In Relationship",
       "category": "relationship",
@@ -422,6 +296,69 @@
           "path": "v/relationship_you_cant_spend_whole_day_with_pillow_v3_480.mp4",
           "bytes": 882375,
           "sha256": "48628daf2f7f584c67bcad48af2741eaca08f6264090a8c89d8c500793617cbe"
+        }
+      }
+    },
+    {
+      "id": "roast_rooster_chaos",
+      "title": "Rooster Chaos",
+      "category": "roast",
+      "duration_s": 8.04,
+      "thumb": "assets/videos/thumbs/roast_rooster_chaos_v3.webp",
+      "play_pack": "pack_starter",
+      "pack_path": "videos/roast_rooster_chaos_v3_720.mp4",
+      "files": {
+        "720": {
+          "path": "v/roast_rooster_chaos_v3_720.mp4",
+          "bytes": 1761784,
+          "sha256": "e2b40d5c3706eabaa898939a5fdcf3c3ca0f729b284b3e3773a21d5bb660447d"
+        },
+        "480": {
+          "path": "v/roast_rooster_chaos_v3_480.mp4",
+          "bytes": 1003063,
+          "sha256": "8a17d3c46f153c94a6fc38a228c02475c7eb8ddbcdd2594ca76581049254c198"
+        }
+      }
+    },
+    {
+      "id": "study_exam_day",
+      "title": "Exam Day",
+      "category": "study",
+      "duration_s": 8.06,
+      "thumb": "assets/videos/thumbs/study_exam_day_v3.webp",
+      "play_pack": "pack_general",
+      "pack_path": "videos/study_exam_day_v3_720.mp4",
+      "files": {
+        "720": {
+          "path": "v/study_exam_day_v3_720.mp4",
+          "bytes": 1565516,
+          "sha256": "9f2309fc40468714cdc7007b6469feea1ea2fda310df801578dc68c6ee6466a7"
+        },
+        "480": {
+          "path": "v/study_exam_day_v3_480.mp4",
+          "bytes": 886750,
+          "sha256": "fc5e711221cf441c51b997087a6ec07c310e62ad82a3b6677bc12e15bf690c7a"
+        }
+      }
+    },
+    {
+      "id": "travel_flight_day",
+      "title": "Flight Day",
+      "category": "travel",
+      "duration_s": 8.06,
+      "thumb": "assets/videos/thumbs/travel_flight_day_v3.webp",
+      "play_pack": "pack_general",
+      "pack_path": "videos/travel_flight_day_v3_720.mp4",
+      "files": {
+        "720": {
+          "path": "v/travel_flight_day_v3_720.mp4",
+          "bytes": 1648946,
+          "sha256": "b7a87b14e61a12bf4ca7f7f005f1d364429e35c0b056e045d01d58c1f7a215fb"
+        },
+        "480": {
+          "path": "v/travel_flight_day_v3_480.mp4",
+          "bytes": 938398,
+          "sha256": "11c8c08d31f1bd438e7b2378cca354f9630e55f532c6db283a032f2d7491f48e"
         }
       }
     }

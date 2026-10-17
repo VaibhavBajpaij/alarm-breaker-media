@@ -101,6 +101,57 @@ def optimize_all_media(base_dir):
                 except Exception as e:
                     print(f'Error generating thumbnail for {fname}: {e}')
 
+            # Ensure v/ streams and WebP thumbnail exist
+            v_dir = os.path.join(base_dir, 'v')
+            os.makedirs(v_dir, exist_ok=True)
+            v720_path = os.path.join(v_dir, f'{category}_{stem}_v3_720.mp4')
+            v480_path = os.path.join(v_dir, f'{category}_{stem}_v3_480.mp4')
+            webp_path = os.path.join(thumbs_dir, f'{category}_{stem}_v3.webp')
+
+            if not os.path.exists(v720_path):
+                print(f'Generating 720p stream for {category}_{stem}...')
+                try:
+                    cmd = [
+                        'ffmpeg', '-y', '-i', video_path,
+                        '-vf', 'scale=-2:720',
+                        '-c:v', 'libx264', '-preset', 'slow', '-b:v', '1200k', '-maxrate', '2400k', '-bufsize', '2400k',
+                        '-c:a', 'aac', '-b:a', '96k',
+                        '-movflags', '+faststart',
+                        v720_path
+                    ]
+                    subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                except Exception as e:
+                    print(f'Error generating 720p: {e}')
+
+            if not os.path.exists(v480_path):
+                print(f'Generating 480p stream for {category}_{stem}...')
+                try:
+                    cmd = [
+                        'ffmpeg', '-y', '-i', video_path,
+                        '-vf', 'scale=-2:480',
+                        '-c:v', 'libx264', '-preset', 'slow', '-b:v', '650k', '-maxrate', '1300k', '-bufsize', '1300k',
+                        '-c:a', 'aac', '-b:a', '96k',
+                        '-movflags', '+faststart',
+                        v480_path
+                    ]
+                    subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                except Exception as e:
+                    print(f'Error generating 480p: {e}')
+
+            if not os.path.exists(webp_path):
+                print(f'Generating WebP thumb for {category}_{stem}...')
+                try:
+                    cmd = [
+                        'ffmpeg', '-y', '-ss', '00:00:01.000', '-i', video_path,
+                        '-vframes', '1',
+                        '-vf', 'scale=320:-2',
+                        '-c:v', 'libwebp', '-quality', '85',
+                        webp_path
+                    ]
+                    subprocess.run(cmd, check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                except Exception as e:
+                    print(f'Error generating WebP thumb: {e}')
+
 def generate_catalog_json(base_dir, explicit_commit_sha=None):
     videos_dir = os.path.join(base_dir, 'videos')
     thumbs_dir = os.path.join(base_dir, 'thumbs')
@@ -193,10 +244,118 @@ def generate_catalog_json(base_dir, explicit_commit_sha=None):
 
     print(f'catalog.json generated successfully. Version: {next_version}, Commit: {commit_sha}, Count: {len(all_videos)}')
 
+def generate_manifest_json(base_dir):
+    videos_dir = os.path.join(base_dir, 'videos')
+    v_dir = os.path.join(base_dir, 'v')
+    thumbs_dir = os.path.join(base_dir, 'thumbs')
+    manifest_path = os.path.join(base_dir, 'manifest.json')
+
+    existing_manifest = {
+        'version': 3,
+        'base_url': 'https://cdn.jsdelivr.net/gh/VaibhavBajpaij/alarm-breaker-media@main/',
+        'backup_base_urls': ['https://vaibhavbajpaij.github.io/alarm-breaker-media/'],
+        'videos': []
+    }
+    if os.path.exists(manifest_path):
+        try:
+            with open(manifest_path, 'r', encoding='utf-8') as f:
+                existing_manifest = json.load(f)
+        except Exception as e:
+            print(f'Warning reading manifest: {e}')
+
+    existing_map = {item['id']: item for item in existing_manifest.get('videos', [])}
+    next_version = existing_manifest.get('version', 3) + 1
+
+    active_items = []
+
+    for category in sorted(os.listdir(videos_dir)):
+        cat_dir = os.path.join(videos_dir, category)
+        if not os.path.isdir(cat_dir):
+            continue
+        for fname in sorted(os.listdir(cat_dir)):
+            if not fname.endswith('.mp4'):
+                continue
+
+            stem = fname[:-4]
+            video_id = f'{category}_{stem}'
+            video_path = os.path.join(cat_dir, fname)
+            info = get_video_info(video_path)
+            duration_s = round(info['duration'], 2) if info else 8.0
+
+            title_stem = stem[:-3] if stem.endswith('_hi') else stem
+            title = ' '.join(word.capitalize() for word in title_stem.split('_'))
+
+            # Multi-quality streams in v/
+            v720_rel = f'v/{video_id}_v3_720.mp4'
+            v480_rel = f'v/{video_id}_v3_480.mp4'
+            v720_abs = os.path.join(base_dir, v720_rel)
+            v480_abs = os.path.join(base_dir, v480_rel)
+
+            # Determine thumbnail path:
+            # If item was originally an offline bundled asset in the APK, preserve assets/videos/thumbs/
+            # For all remote items, use relative path thumbs/<id>_v3.webp (NO assets/ prefix so Image.network is used)
+            webp_rel = f'thumbs/{video_id}_v3.webp'
+            webp_abs = os.path.join(base_dir, webp_rel)
+            old_item = existing_map.get(video_id, {})
+            old_thumb = old_item.get('thumb', '')
+
+            if old_thumb.startswith('assets/'):
+                thumb_rel = old_thumb
+            elif os.path.exists(webp_abs):
+                thumb_rel = webp_rel
+            else:
+                thumb_rel = f'thumbs/{category}/{stem}.jpg'
+
+            files_dict = {}
+            if os.path.exists(v720_abs):
+                files_dict['720'] = {
+                    'path': v720_rel,
+                    'bytes': os.path.getsize(v720_abs),
+                    'sha256': sha256_checksum(v720_abs)
+                }
+            if os.path.exists(v480_abs):
+                files_dict['480'] = {
+                    'path': v480_rel,
+                    'bytes': os.path.getsize(v480_abs),
+                    'sha256': sha256_checksum(v480_abs)
+                }
+
+            if not files_dict:
+                files_dict['720'] = {
+                    'path': f'videos/{category}/{fname}',
+                    'bytes': os.path.getsize(video_path),
+                    'sha256': sha256_checksum(video_path)
+                }
+
+            pack_name = old_item.get('play_pack', 'pack_general')
+
+            active_items.append({
+                'id': video_id,
+                'title': title,
+                'category': category,
+                'duration_s': duration_s,
+                'thumb': thumb_rel,
+                'play_pack': pack_name,
+                'pack_path': f'videos/{video_id}_v3_720.mp4',
+                'files': files_dict
+            })
+
+    manifest_data = {
+        'version': next_version,
+        'base_url': existing_manifest.get('base_url', 'https://cdn.jsdelivr.net/gh/VaibhavBajpaij/alarm-breaker-media@main/'),
+        'backup_base_urls': existing_manifest.get('backup_base_urls', ['https://vaibhavbajpaij.github.io/alarm-breaker-media/']),
+        'videos': active_items
+    }
+
+    with open(manifest_path, 'w', encoding='utf-8') as f:
+        json.dump(manifest_data, f, indent=2)
+
+    print(f'manifest.json generated successfully. Version: {next_version}, Count: {len(active_items)}')
+
 def main():
     parser = argparse.ArgumentParser(description='Build Video Catalog and Optimize Media')
     parser.add_argument('--optimize-only', action='store_true', help='Only optimize videos and generate thumbnails')
-    parser.add_argument('--catalog-only', action='store_true', help='Only generate catalog.json')
+    parser.add_argument('--catalog-only', action='store_true', help='Only generate catalog.json and manifest.json')
     parser.add_argument('--commit-sha', type=str, default=None, help='Explicit commit SHA to embed in catalog.json')
     args = parser.parse_args()
 
@@ -206,9 +365,11 @@ def main():
         optimize_all_media(base_dir)
     elif args.catalog_only:
         generate_catalog_json(base_dir, explicit_commit_sha=args.commit_sha)
+        generate_manifest_json(base_dir)
     else:
         optimize_all_media(base_dir)
         generate_catalog_json(base_dir, explicit_commit_sha=args.commit_sha)
+        generate_manifest_json(base_dir)
 
 if __name__ == '__main__':
     main()
