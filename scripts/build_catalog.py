@@ -5,6 +5,7 @@ import json
 import hashlib
 import subprocess
 import datetime
+import time
 import re
 import argparse
 
@@ -190,7 +191,7 @@ def generate_catalog_json(base_dir, explicit_commit_sha=None):
             print(f'Warning reading catalog: {e}')
 
     existing_map = {item['id']: item for item in existing_catalog.get('videos', [])}
-    next_version = existing_catalog.get('version', 0) + 1
+    next_version = int(time.time())
 
     active_items = []
     seen_ids = set()
@@ -298,7 +299,7 @@ def generate_manifest_json(base_dir):
             print(f'Warning reading manifest: {e}')
 
     existing_map = {item['id']: item for item in existing_manifest.get('videos', [])}
-    next_version = existing_manifest.get('version', 3) + 1
+    next_version = int(time.time())
 
     active_items = []
 
