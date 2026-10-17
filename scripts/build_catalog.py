@@ -54,6 +54,30 @@ def sha256_checksum(path):
             h.update(chunk)
     return h.hexdigest()
 
+def sanitize_thumb_path(raw_thumb, category, stem, video_id, base_dir):
+    """
+    Strict sanitizer ensuring thumbnail paths NEVER begin with assets/ or assets/videos/.
+    Strictly formatted as:
+      "thumbs/<filename>.webp" (or "thumbs/<category>/<filename>.jpg" if WebP does not exist).
+    """
+    webp_rel = f'thumbs/{video_id}_v3.webp'
+    webp_abs = os.path.join(base_dir, webp_rel)
+    if os.path.exists(webp_abs):
+        return webp_rel
+
+    cleaned = (raw_thumb or '').strip()
+    while cleaned.startswith('assets/'):
+        cleaned = cleaned[len('assets/'):]
+    while cleaned.startswith('videos/'):
+        cleaned = cleaned[len('videos/'):]
+
+    if cleaned.startswith('thumbs/') and not cleaned.startswith('thumbs/assets'):
+        cleaned_abs = os.path.join(base_dir, cleaned)
+        if os.path.exists(cleaned_abs):
+            return cleaned
+
+    return f'thumbs/{category}/{stem}.jpg'
+
 def optimize_all_media(base_dir):
     videos_dir = os.path.join(base_dir, 'videos')
     thumbs_dir = os.path.join(base_dir, 'thumbs')
@@ -199,13 +223,16 @@ def generate_catalog_json(base_dir, explicit_commit_sha=None):
             raw_words = re.findall(r'[a-zA-Z0-9]+', f'{category} {title_stem}')
             tags = sorted(list(set(w.lower() for w in raw_words if w.lower() not in ['mp4', 'hi'])))
 
+            old_item = existing_map.get(video_id, {})
+            thumb_path_rel = sanitize_thumb_path(old_item.get('thumb', ''), category, stem, video_id, base_dir)
+
             active_items.append({
                 'id': video_id,
                 'category': category,
                 'title': title,
                 'lang': lang,
                 'file': f'videos/{category}/{fname}',
-                'thumb': f'thumbs/{category}/{stem}.jpg',
+                'thumb': thumb_path_rel,
                 'duration_s': duration_s,
                 'size_bytes': size_bytes,
                 'sha256': sha256,
@@ -218,7 +245,14 @@ def generate_catalog_json(base_dir, explicit_commit_sha=None):
         if old_id not in seen_ids:
             rem = dict(old_item)
             rem['removed'] = True
+            old_cat = rem.get('category', 'unknown')
+            old_stem = old_id.split('_', 1)[-1] if '_' in old_id else old_id
+            rem['thumb'] = sanitize_thumb_path(rem.get('thumb', ''), old_cat, old_stem, old_id, base_dir)
             all_videos.append(rem)
+
+    for item in all_videos:
+        if 'thumb' in item:
+            assert not item['thumb'].startswith('assets/'), f"Illegal thumb in catalog.json: {item['thumb']}"
 
     all_videos.sort(key=lambda x: (x.get('category', ''), x.get('title', '')))
 
@@ -292,13 +326,8 @@ def generate_manifest_json(base_dir):
             v480_abs = os.path.join(base_dir, v480_rel)
 
             old_item = existing_map.get(video_id, {})
-            # Strictly output thumbs/<filename>.webp without assets/ prefix
-            webp_rel = f'thumbs/{video_id}_v3.webp'
-            webp_abs = os.path.join(base_dir, webp_rel)
-            if os.path.exists(webp_abs):
-                thumb_rel = webp_rel
-            else:
-                thumb_rel = f'thumbs/{category}/{stem}.jpg'
+            # Strictly sanitize thumbnail path to output thumbs/<filename>.webp or thumbs/<category>/<stem>.jpg
+            thumb_rel = sanitize_thumb_path(old_item.get('thumb', ''), category, stem, video_id, base_dir)
 
             files_dict = {}
             if os.path.exists(v720_abs):
@@ -333,6 +362,10 @@ def generate_manifest_json(base_dir):
                 'pack_path': f'videos/{video_id}_v3_720.mp4',
                 'files': files_dict
             })
+
+    for item in active_items:
+        if 'thumb' in item:
+            assert not item['thumb'].startswith('assets/'), f"Illegal thumb in manifest.json: {item['thumb']}"
 
     manifest_data = {
         'version': next_version,
